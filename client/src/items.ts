@@ -2,6 +2,7 @@ import {Http, Headers} from 'angular2/http';
 import {Store} from '@ngrx/store';
 import {Injectable} from 'angular2/core';
 import {Observable} from 'rxjs/Observable';
+import {AppStore} from './app.store';
 
 const BASE_URL = 'http://localhost:3000/items/';
 const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
@@ -10,11 +11,6 @@ export interface Item {
   id: number;
   name: string;
   description: string;
-};
-
-export interface AppStore {
-  items: Item[];
-  selectedItem: Item;
 };
 
 //-------------------------------------------------------------------
